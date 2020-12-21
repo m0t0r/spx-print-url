@@ -47,7 +47,7 @@ export default function Home() {
 
       return {
         ...obj,
-        [key]: other ? `${value?.trim()}:${other.join(':')}`.replace(/['"]+/g, '') : value?.trim().replace(/['"]+/g, ''),
+        [key]: other.length > 0 ? `${value?.trim()}:${other.join(':')}`.replace(/['"]+/g, '') : value?.trim().replace(/['"]+/g, ''),
       };
     }, {});
   }
