@@ -47,10 +47,7 @@ export default function Home() {
 
       return {
         ...obj,
-        [key]:
-          key.toLowerCase().includes('time') && !key.toLowerCase().includes('isrealtime')
-            ? `${value?.trim()}:${other.join(':')}`.replace(/['"]+/g, '')
-            : value?.trim().replace(/['"]+/g, ''),
+        [key]: other ? `${value?.trim()}:${other.join(':')}`.replace(/['"]+/g, '') : value?.trim().replace(/['"]+/g, ''),
       };
     }, {});
   }
